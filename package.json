@@ -1,0 +1,30 @@
+{
+ "name": "va-attachment",
+  "version": "1.0.0",
+  "description": "va-attachment is a javascript and css package to help va/attachment package that is laravel package",
+  "keywords": [
+    "attachment-js",
+    "attachment",
+    "laravel-upload",
+    "upload",
+    "laravel"
+  ],
+  "dependencies": {
+    "alertifyjs": "~1.13.1",
+    "animate.css": "~4.1.1",
+    "bootstrap": "^4.6.0",
+    "jquery-ui": "~1.12.1",
+    "lity": "~2.4.1",
+    "sweetalert2": "~10.10.1",
+    "uniqid": "~5.2.0"
+  },
+  "author": {
+    "name": "Vahid Ashourzadeh",
+    "email": "v.ashourzadeh@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/imvahid/media-uploader-js.git"
+  },
+  "license": "ISC"
+}
