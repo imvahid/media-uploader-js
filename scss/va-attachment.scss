@@ -1,5 +1,5 @@
 // Bootstrap
-@import  '~bootstrap/scss/bootstrap';
+@import '~bootstrap-v4-rtl/scss/bootstrap-rtl';
 
 // Plugins
 @import "~animate.css/animate.compat.css";
@@ -81,51 +81,49 @@ $theme_red: #DF2935;
 .gallery_files .gallery_file_upload,
 .uploaded_files .attachment_file_upload,
 .video_files .video_file_upload{
+    border: thin solid $theme_gray;
+    padding: 1em;
+    border-radius: 3px;
+    direction: ltr;
+    text-align: left;
+    position: relative;
+
+    .delete_file{
+        display: block;
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        line-height: 26px;
         border: thin solid $theme_gray;
-        padding: 1em;
-        border-radius: 3px;
-        position: relative;
+        border-radius: 50%;
+        background-color: $white;
+        color: $theme_red;
+        cursor: pointer;
+        transition: $transition_base;
 
-        .delete_file{
-            display: block;
-            position: absolute;
-            top: 1px;
-            right: 1px;
-            width: 24px;
-            height: 24px;
-            text-align: center;
-            line-height: 26px;
+        &:hover{
+            background-color: mix( $white, $red );
+        }
+    }
+
+    &:nth-child(odd){
+        background-color: lighten( $theme_gray, 15 );
+    }
+
+    .uploaded_file_thumbnail{
+        img{
             border: thin solid $theme_gray;
-            border-radius: 50%;
-            background-color: $white;
-            color: $theme_red;
-            cursor: pointer;
-            transition: $transition_base;
+            width: 100px;
+            height: 100px;
+            padding: 0.1em;
+            border-radius: 3px;
+            margin-right: 1em;
+        }
+    }
 
-            &:hover{
-                background-color: mix( $white, $red );
-            }
-        }
-
-        &:nth-child(odd){
-            background-color: lighten( $theme_gray, 15 );
-        }
-
-        .uploaded_file_thumbnail{
-            img{
-                border: thin solid $theme_gray;
-                width: 100px;
-                height: 100px;
-                padding: 0.1em;
-                border-radius: 3px;
-            }
-        }
-        .file_info {
-            margin-top: 1rem;
-            .file_name {
-                margin-right: 0.5rem;
-            }
-        }
 }
 // End Gallery
 
@@ -201,61 +199,3 @@ $theme_red: #DF2935;
     font-weight: 900;
 }
 // End Process
-
-// ******************* start style for input attachment
-.custom-file {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    margin-bottom: 0;
-}
-.custom-file-input {
-    position: relative !important;
-    z-index: 2;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    margin: 0;
-    opacity: 0;
-}
-.custom-control-label::before, .custom-file-label, .custom-select {
-    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-.custom-file-input:lang(en)~.custom-file-label::after {
-    content: "Browse";
-}
-.custom-file-label::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 3;
-    display: block;
-    height: calc(1.5em + .75rem);
-    padding: .375rem .75rem;
-    line-height: 1.5;
-    color: #495057;
-    content: "Browse";
-    background-color: #e9ecef;
-    border-right: 0;
-    border-radius: 0.25rem 0 0 0.25rem;
-}
-input {
-    overflow: visible;
-}
-.custom-file-label {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-}
-// ******************* end style for input attachment
