@@ -1,6 +1,6 @@
 {
  "name": "va-attachment",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "va-attachment is a javascript and css package to help va/attachment package that is laravel package",
   "keywords": [
     "attachment-js",
