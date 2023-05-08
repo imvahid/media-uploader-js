@@ -91,14 +91,14 @@ $theme_red: #DF2935;
     .delete_file{
         display: block;
         position: absolute;
-        top: 1px;
-        right: 1px;
+        top: 15px;
+        right: 15px;
         width: 24px;
         height: 24px;
         text-align: center;
         line-height: 26px;
         border: thin solid $theme_gray;
-        border-radius: 50%;
+        border-radius: 20%;
         background-color: $white;
         color: $theme_red;
         cursor: pointer;
